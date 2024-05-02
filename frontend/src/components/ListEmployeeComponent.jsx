@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import EmployeeService from '../services/EmployeeService'
 
 export default class ListEmployeeComponent extends Component {
 
@@ -9,6 +10,13 @@ export default class ListEmployeeComponent extends Component {
         this.state = {
             funcionarios:[]
         }
+    }
+
+
+    componentDidMount(){
+        EmployeeService.getEmployees().then((res)=> {
+            this.setState({funcionarios: res.data});
+        });
     }
 
   render() {
