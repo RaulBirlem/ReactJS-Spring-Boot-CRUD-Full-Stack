@@ -15,9 +15,10 @@ function App() {
     <BrowserRouter>
       <HeaderComponent/>
         <Routes>
-          <Route path='/' element = {<ListEmployeeComponent/>}></Route>
-          <Route path='/employees' element = {<ListEmployeeComponent/>}></Route>
-          <Route path='/add-employee'element = {<EmployeeComponent/>}></Route>
+          <Route path='/' element = {<ListEmployeeComponent/>}></Route> {/*home */}
+          <Route path='/employees' element = {<ListEmployeeComponent/>}></Route> {/*get all */}
+          <Route path='/add-employee'element = {<EmployeeComponent/>}></Route> {/*post */} {/*put */}
+          <Route path='/edit-employee/:id' element = {<EmployeeComponent/>}></Route>
         </Routes>
         <FooterComponent/>
     </BrowserRouter>
