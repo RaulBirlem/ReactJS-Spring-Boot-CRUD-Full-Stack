@@ -40,7 +40,7 @@ const EmployeeComponent = () => {
             console.log(employee)
 
             if(id){
-                updateEmployee(id, en).then((response)=>{
+                updateEmployee(id, employee).then((response)=>{
                     console.log(response.data);
                     navigator('/employees')
                 }).catch(error => {
